@@ -1,0 +1,28 @@
+name: Wrong or unknown answer
+description: A domain came back with the wrong status, or Unknown, for an extension or registry.
+labels: [registry]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      placeholder: e.g. exemplo.io
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Expected status
+      placeholder: Available / Registered
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of `domaincheck <domain> --json`
+      render: json
+  - type: textarea
+    id: raw
+    attributes:
+      label: Raw WHOIS or Registro.br answer (optional)
+      description: Remove personal data (names, e-mails, phones) before pasting.

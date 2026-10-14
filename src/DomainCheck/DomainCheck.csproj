@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>DomainCheck</PackageId>
+    <Description>Checks whether domain names are available: .br through Registro.br, every other extension through WHOIS (registry discovered via IANA), with a DNS pre-check and name generation from keywords. Zero dependencies.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <InternalsVisibleTo Include="DomainCheck.Tests" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>DomainCheck.Cli</AssemblyName>
+    <RootNamespace>DomainCheck.Cli</RootNamespace>
+    <PackageId>DomainCheck.Cli</PackageId>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>domaincheck</ToolCommandName>
+    <Description>Command-line tool to check domain availability (.br via Registro.br, others via WHOIS) and generate candidates from keywords.</Description>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <ProjectReference Include="..\DomainCheck\DomainCheck.csproj" />
+  </ItemGroup>
+
+</Project>
