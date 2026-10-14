@@ -92,7 +92,13 @@ domaincheck --words "casa das panelas" [--tlds com.br,com,net] [options]
 
 - **Registro.br endpoint.** The `.br` check uses the endpoint behind the availability search on registro.br. It is not a documented public API and may change; the URL and the status mapping are configurable for that reason. Keep volumes moderate.
 - **"Available" is a strong hint, not a reservation.** The only proof is registering the domain. Premium and reserved names may show as available in WHOIS.
+- **Why not RDAP?** RDAP is the standard successor of WHOIS, but its public servers (including Registro.br's) apply tight rate limits that make bulk checks impractical. The Registro.br endpoint and port-43 WHOIS handle volume much better in practice. An optional RDAP provider is on the roadmap, and you can plug one in today through `IAvailabilityProvider`.
 - **WHOIS formats vary by registry.** Unrecognised answers come back as `Unknown` with the raw text — please open an issue with a sample.
+
+## Roadmap
+
+- Optional RDAP provider (as a fallback for extensions without a WHOIS server).
+- Persisted cache of results, to resume long lists.
 
 ## License
 

@@ -45,7 +45,13 @@ foreach (var nome in NameGenerator.FromWords("Casa das Panelas"))
 
 - **Endpoint do Registro.br.** A consulta `.br` usa o endpoint da busca de disponibilidade do site registro.br. Não é uma API pública documentada e pode mudar; por isso a URL e o mapeamento de status são configuráveis. Mantenha volumes moderados.
 - **"Livre" é um forte indício, não uma reserva.** A única garantia é registrar.
+- **Por que não RDAP?** O RDAP é o sucessor padronizado do WHOIS, mas os servidores públicos (inclusive o do Registro.br) têm limites de consulta apertados, que inviabilizam checagens em volume. Na prática, o endpoint do Registro.br e o WHOIS na porta 43 aguentam muito mais. Um provedor RDAP opcional está nos próximos passos, e já dá para plugar um hoje via `IAvailabilityProvider`.
 - **Cada registro tem seu formato de WHOIS.** Respostas não reconhecidas voltam como `Unknown` com o texto original — abra uma issue com o exemplo.
+
+## Próximos passos
+
+- Provedor RDAP opcional (como alternativa para extensões sem servidor WHOIS).
+- Cache persistente de resultados, para retomar listas longas.
 
 ## Licença
 
