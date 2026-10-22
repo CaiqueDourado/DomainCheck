@@ -20,6 +20,21 @@ casa-das-panelas.com                 Available    -           whois:whois.verisi
 
 ## Como decide
 
+```mermaid
+flowchart LR
+  I["Entrada<br/>https://www.Loja.com.br/x"] --> N["Normaliza<br/>loja.com.br · punycode"]
+  N --> D{"Resolve<br/>no DNS?"}
+  D -->|"sim"| REG["registrado<br/>fonte: dns"]
+  D -->|"não"| E{"Extensão"}
+  E -->|".br"| RB["Registro.br<br/>0 livre · 2 registrado · 3 inválido"]
+  E -->|"outra"| W["WHOIS porta 43<br/>servidor via whois.iana.org, em cache"]
+  RB --> O["Resultado<br/>status · quem respondeu · resposta bruta"]
+  W --> O
+  REG --> O
+  P["1 s entre consultas<br/>ao mesmo servidor"] -.-> RB
+  P -.-> W
+```
+
 1. **Normaliza**: `https://www.Loja.com.br/x` vira `loja.com.br`; nomes com acento viram punycode (`açaí.com.br` → `xn--aa-4iaz.com.br`).
 2. **DNS primeiro**: se o nome resolve, está registrado, sem precisar consultar o registro. Os que não resolvem seguem para o registro, porque muitos domínios registrados não têm DNS.
 3. **Registro**:

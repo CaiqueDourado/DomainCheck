@@ -22,6 +22,21 @@ casapanelas.com.br                   Available    -           registro.br
 
 ## How it decides
 
+```mermaid
+flowchart LR
+  I["Input<br/>https://www.Loja.com.br/x"] --> N["Normalise<br/>loja.com.br · punycode"]
+  N --> D{"Resolves<br/>in DNS?"}
+  D -->|"yes"| REG["registered<br/>source: dns"]
+  D -->|"no"| E{"Extension"}
+  E -->|".br"| RB["Registro.br<br/>0 free · 2 registered · 3 invalid"]
+  E -->|"other"| W["WHOIS port 43<br/>server from whois.iana.org, cached"]
+  RB --> O["Result<br/>status · who answered · raw answer"]
+  W --> O
+  REG --> O
+  P["1 s between queries<br/>to the same server"] -.-> RB
+  P -.-> W
+```
+
 1. **Normalise**: `https://www.Loja.com.br/x` → `loja.com.br`; internationalised names to punycode (`açaí.com.br` → `xn--aa-4iaz.com.br`).
 2. **DNS pre-check**: a name that resolves is registered — no registry query needed. Names that do not resolve still go to the registry, because many registered domains have no DNS.
 3. **Registry**:
