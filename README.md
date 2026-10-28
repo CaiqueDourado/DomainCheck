@@ -5,6 +5,8 @@
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)
 
+![DomainCheck](docs/img/cover.png)
+
 **Is this domain available?** For `.br` it asks Registro.br; for `.com`, `.net`, `.io` and every other extension it asks the registry's WHOIS server, discovered through IANA. A DNS pre-check answers the obvious cases instantly, and a name generator turns keywords into candidates.
 
 [Leia em português](README.pt-BR.md)

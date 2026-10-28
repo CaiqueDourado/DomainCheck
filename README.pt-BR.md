@@ -5,6 +5,8 @@
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Dependências: 0](https://img.shields.io/badge/depend%C3%AAncias-0-brightgreen)
 
+![DomainCheck](docs/img/cover.pt-BR.png)
+
 **Esse domínio está livre?** Para `.br` pergunta ao Registro.br; para `.com`, `.net`, `.io` e qualquer outra extensão pergunta ao WHOIS do registro, descoberto pela IANA. Um teste de DNS responde na hora os casos óbvios, e um gerador transforma palavras-chave em nomes candidatos.
 
 [Read in English](README.md)
