@@ -7,7 +7,7 @@
 
 ![DomainCheck](docs/img/cover.png)
 
-**Is this domain available?** For `.br` it asks Registro.br; for `.com`, `.net`, `.io` and every other extension it asks the registry's WHOIS server, discovered through IANA. A DNS pre-check answers the obvious cases instantly, and a name generator turns keywords into candidates.
+**Is this domain free?** For `.br` it asks Registro.br. For `.com`, `.net`, `.io` and every other extension it asks the registry's WHOIS server, which it finds through IANA. A quick DNS check answers the obvious cases right away, and a name generator turns keywords into options.
 
 [Leia em português](README.pt-BR.md)
 

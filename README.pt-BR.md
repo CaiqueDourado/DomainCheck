@@ -7,7 +7,7 @@
 
 ![DomainCheck](docs/img/cover.pt-BR.png)
 
-**Esse domínio está livre?** Para `.br` pergunta ao Registro.br; para `.com`, `.net`, `.io` e qualquer outra extensão pergunta ao WHOIS do registro, descoberto pela IANA. Um teste de DNS responde na hora os casos óbvios, e um gerador transforma palavras-chave em nomes candidatos.
+**Esse domínio está livre?** Para `.br`, pergunta ao Registro.br. Para `.com`, `.net`, `.io` e qualquer outra extensão, pergunta ao servidor WHOIS do registro, que ele acha pela IANA. Uma checagem rápida de DNS responde os casos óbvios na hora, e um gerador de nomes transforma palavras-chave em opções.
 
 [Read in English](README.md)
 
